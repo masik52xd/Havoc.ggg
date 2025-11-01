@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Турніри | Havoc.gg</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+        body { background-color: #1B2631; color: #F5F5F5; font-family: 'Roboto', sans-serif; margin: 0; padding: 20px; }
+        .container { max-width: 1000px; margin: 0 auto; }
+        .header { display: flex; justify-content: space-between; align-items: center; padding-bottom: 15px; border-bottom: 1px solid #34495E; margin-bottom: 30px; }
+        .header .logo img { max-height: 40px; }
+        .nav a { color: #E5E7E9; text-decoration: none; margin-left: 25px; font-size: 1.1em; }
+        .tournament-item { background-color: #283747; border: 1px solid #34495E; border-radius: 8px; margin-bottom: 20px; }
+        .tournament-header { padding: 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+        .tournament-header h2 { margin: 0; font-size: 1.5em; color: #5DADE2; }
+        .tournament-header .tournament-meta { color: #BDC3C7; }
+        .tournament-header .prize { font-size: 1.2em; font-weight: 500; text-align: right; }
+        .tournament-details { padding: 0 20px 20px 20px; max-height: 0; overflow: hidden; transition: max-height 0.5s ease-out, padding 0.5s ease-out; }
+        .tournament-details.active { max-height: 1000px; padding-top: 20px; border-top: 1px solid #34495E; }
+        .tournament-banner { width: 100%; border-radius: 5px; margin-bottom: 20px; }
+        .details-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+        .winners-list h3, .teams-list h3 { margin-top: 0; color: #FFFFFF; }
+        .winners-list ol { padding-left: 20px; }
+        .winners-list li { padding: 5px 0; font-size: 1.1em; }
+        .team-roster { list-style: none; padding: 0; }
+        .team-roster li { margin-bottom: 15px; }
+        .team-name { font-weight: 700; font-size: 1.2em; margin-bottom: 5px; display: flex; align-items: center; }
+        .team-name img { height: 24px; width: 24px; object-fit: contain; margin-right: 10px; }
+        .player { padding-left: 34px; color: #E5E7E9; display: block; }
+        .player .substitute { color: #99aab5; font-style: italic; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <a href="havoc_main_page.html" class="logo"><img src="images/havoc-logo.png" alt="Havoc.gg Logo"></a>
+            <nav class="nav">
+                <a href="havoc_main_page.html">Головна</a>
+                <a href="havoc_tournaments_page.html">Турніри</a>
+            </nav>
+        </header>
+        <div class="tournament-item">
+            <div class="tournament-header">
+                <div>
+                    <h2>BSUL Havoc Summer 2025 [Завершено]</h2>
+                    <p class="tournament-meta">Формат: 2v2 Online</p>
+                </div>
+                <div class="prize">Призовий фонд: $50,000</div>
+            </div>
+            <div class="tournament-details">
+                <img src="images/bsul-banner.png" alt="BSUL Banner" class="tournament-banner">
+                <p><i>"Легендарний літній турнір, де найсильніші команди зійшлися у боротьбі за звання чемпіона. Битви були напруженими, а фінал став справжньою окрасою сезону."</i></p>
+                <div class="details-grid">
+                    <div class="winners-list">
+                        <h3>🏆 Переможці</h3>
+                        <ol>
+                            <li>Pivo20</li>
+                            <li>Outsiders</li>
+                            <li>true. ESports</li>
+                        </ol>
+                    </div>
+                    <div class="teams-list">
+                        <h3>Учасники</h3>
+                        <ul class="team-roster">
+                            <li>
+                                <div class="team-name"><img src="images/Pivo20.png" alt="Pivo20 Logo"> Pivo20</div>
+                                <span class="player">- Сашко</span>
+                                <span class="player">- trigger_sound</span>
+                            </li>
+                            <li>
+                                <div class="team-name"><img src="images/Outsiders.png" alt="Outsiders Logo"> Outsiders</div>
+                                <span class="player">- ChortIzTabakerky</span>
+                                <span class="player">- yarema29</span>
+                                <span class="player"><span class="substitute">- NinetyEight (Запасний)</span></span>
+                            </li>
+                            <li>
+                                <div class="team-name"><img src="images/true.png" alt="true. ESports Logo"> true. ESports</div>
+                                <span class="player">- TheSeuge</span>
+                                <span class="player">- mas1k52</span>
+                            </li>
+                            <li>
+                                <div class="team-name"><img src="images/arsen.png" alt="SUPER PRO MAX Logo"> SUPER PRO MAX...</div>
+                                <span class="player">- ReVan_10</span>
+                                <span class="player">- NEMO_11</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tournament-item">
+            <div class="tournament-header">
+                <div>
+                    <h2>Havoc Pro League: Season 1 [Майбутній]</h2>
+                    <p class="tournament-meta">Формат: 2v2 LAN</p>
+                </div>
+                <div class="prize">Призовий фонд: $100,000</div>
+            </div>
+            <div class="tournament-details">
+                 <p><i>"Нова ера змагального Havoc! Перший сезон великої ліги, що збере найкращих гравців світу під одним дахом для визначення абсолютного чемпіона."</i></p>
+                 <div class="details-grid">
+                    <div class="winners-list">
+                        <h3>🏆 Переможці</h3>
+                        <ol><li>TBD</li><li>TBD</li><li>TBD</li></ol>
+                    </div>
+                    <div class="teams-list">
+                        <h3>Учасники</h3>
+                        <ul class="team-roster"><li>(Інформація з'явиться пізніше)</li></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('.tournament-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const details = header.nextElementSibling;
+                details.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
