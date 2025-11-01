@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Havoc.gg | Головні новини та матчі</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+        body { background-color: #1B2631; color: #F5F5F5; font-family: 'Roboto', sans-serif; margin: 0; padding: 20px; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .header { display: flex; justify-content: space-between; align-items: center; padding-bottom: 15px; border-bottom: 1px solid #34495E; margin-bottom: 30px; }
+        .header .logo img { max-height: 40px; }
+        .nav a { color: #E5E7E9; text-decoration: none; margin-left: 25px; font-size: 1.1em; transition: color 0.2s ease; }
+        .nav a:hover { color: #5DADE2; }
+        .layout { display: grid; grid-template-columns: 1fr 320px; gap: 30px; }
+        .card, .widget { background-color: #283747; border: 1px solid #34495E; border-radius: 8px; padding: 25px; }
+        h1, h2, h3 { margin-top: 0; font-weight: 700; }
+        .featured-news .news-image { width: 100%; border-radius: 5px; margin-bottom: 20px; }
+        .featured-news a { text-decoration: none; }
+        .featured-news h1 { color: #5DADE2; font-size: 2em; margin-bottom: 15px; transition: color 0.2s ease; }
+        .featured-news a:hover h1 { color: #82c2ed; }
+        .featured-news p { font-size: 1.1em; line-height: 1.6; color: #BDC3C7; }
+        .news-list h2 { margin-bottom: 20px; }
+        .news-item { border-bottom: 1px solid #34495E; }
+        .news-item:last-child { border-bottom: none; }
+        .news-header { padding: 15px 0; cursor: pointer; }
+        .news-header h4 { margin: 0; font-size: 1.2em; font-weight: 500; }
+        .news-details { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out; }
+        .news-details p { margin-top: 0; color: #BDC3C7; }
+        .news-details.active { max-height: 200px; padding-bottom: 15px; }
+        .read-more { color: #5DADE2; text-decoration: none; font-weight: bold; }
+        .widget h3 { color: #FFFFFF; padding-bottom: 10px; border-bottom: 1px solid #34495E; margin-bottom: 15px; }
+        .team-display { display: flex; align-items: center; font-weight: 500; margin: 5px 0; }
+        .team-display img { height: 20px; width: 20px; object-fit: contain; margin-right: 10px; }
+        .match-item { padding: 10px 0; display: flex; justify-content: space-between; align-items: center; }
+        .transfer-item { padding: 10px 0; }
+        .live-badge { background-color: #E74C3C; color: #fff; padding: 4px 8px; border-radius: 5px; font-size: 0.8em; font-weight: bold; }
+        .score { font-weight: 700; font-size: 1.1em; }
+        .transfer-info { text-align: right; }
+        .transfer-info .player { font-weight: bold; }
+        .transfer-info .teams { font-size: 0.9em; color: #BDC3C7; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <a href="index.html" class="logo"><img src="images/havoc-logo.png" alt="Havoc.gg Logo"></a>
+            <nav class="nav">
+                <a href="index.html">Головна</a>
+                <a href="havoc_tournaments_page.html">Турніри</a>
+            </nav>
+        </header>
+        <div class="layout">
+            <main class="main-content">
+                <article class="card featured-news">
+                    <img src="images/main-news-photo.jpg" alt="BSUL Tournament News" class="news-image">
+                    <a href="havoc_news_article.html">
+                        <h1>ТЕРМІНОВО: Турнір BSUL перенесено, трансфер NinetyEight скасовано!</h1>
+                    </a>
+                    <p>Через непередбачені технічні проблеми старт довгоочікуваного турніру BSUL Havoc Summer 2025 переноситься на 19 серпня...</p>
+                </article>
+                <section class="card news-list">
+                    <h2>Останні новини</h2>
+                    <div class="news-item">
+                        <div class="news-header"><h4>Анонс BSUL Havoc Summer 2025!</h4></div>
+                        <div class="news-details">
+                            <p>Організатори розкрили деталі головного літнього турніру: призовий фонд, список перших запрошених команд та розклад кваліфікацій.</p>
+                            <a href="#" class="read-more">Читати далі...</a>
+                        </div>
+                    </div>
+                    <div class="news-item">
+                        <div class="news-header"><h4>Аналіз оновлення 16361846: що нового в геймплеї?</h4></div>
+                        <div class="news-details">
+                            <p>Розбираємо ключові зміни останнього патчу, які можуть суттєво вплинути на професійну сцену.</p>
+                            <a href="#" class="read-more">Читати далі...</a>
+                        </div>
+                    </div>
+                    <div class="news-item">
+                        <div class="news-header"><h4>Сумні новини: Команда Goli Fallasi розпадається</h4></div>
+                        <div class="news-details">
+                            <p>Після невдалого сезону, організація Goli Fallasi оголосила про розпуск свого складу з Havoc.</p>
+                            <a href="#" class="read-more">Читати далі...</a>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <aside class="sidebar">
+                <div class="widget">
+                    <h3>Матчі Live</h3>
+                    <div class="match-item">
+                        <div>
+                            <div class="team-display"><img src="images/arsen.png" alt="SUPER PRO MAX Logo"> SUPER PRO MAX...</div>
+                            <div class="team-display"><img src="images/Pivo20.png" alt="Pivo20 Logo"> Pivo20</div>
+                        </div>
+                        <span class="live-badge">LIVE</span>
+                    </div>
+                </div>
+                <div class="widget">
+                    <h3>Останні трансфери</h3>
+                    <div class="transfer-item">
+                        <div class="transfer-info">
+                            <div class="player">mas1k52</div>
+                            <div class="teams">Вільний агент → true. ESports</div>
+                        </div>
+                    </div>
+                    <div class="transfer-item">
+                        <div class="transfer-info">
+                            <div class="player">ReVan_10</div>
+                            <div class="teams">Вільний агент → SUPER PRO MAX...</div>
+                        </div>
+                    </div>
+                     <div class="transfer-item">
+                        <div class="transfer-info">
+                            <div class="player">yarema29</div>
+                            <div class="teams">Контракт продовжено з Outsiders</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="widget">
+                    <h3>Результати</h3>
+                    <div class="match-item">
+                        <div>
+                            <div class="team-display"><img src="images/true.png" alt="true. ESports Logo"> true. ESports</div>
+                            <div class="team-display"><img src="images/arsen.png" alt="SUPER PRO MAX Logo"> SUPER PRO MAX...</div>
+                        </div>
+                        <div class="score">10 - 8</div>
+                    </div>
+                    <div class="match-item">
+                        <div>
+                            <div class="team-display"><img src="images/Outsiders.png" alt="Outsiders Logo"> Outsiders</div>
+                            <div class="team-display"><img src="images/Pivo20.png" alt="Pivo20 Logo"> Pivo20</div>
+                        </div>
+                        <div class="score">10 - 9</div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('.news-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const details = header.nextElementSibling;
+                document.querySelectorAll('.news-details.active').forEach(activeDetail => {
+                    if (activeDetail !== details) {
+                        activeDetail.classList.remove('active');
+                    }
+                });
+                details.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
